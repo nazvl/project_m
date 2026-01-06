@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import type {ChatPreview} from "@/types.ts";
 
 const props = defineProps<ChatPreview>()
@@ -13,8 +13,8 @@ const props = defineProps<ChatPreview>()
     <div class="relative shrink-0">
       <el-avatar
           :size="56"
-          class="shadow-sm"
           :src="props.imageUrl || 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'"
+          class="shadow-sm"
       />
       <span
           v-if="props.online"
