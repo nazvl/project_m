@@ -3,7 +3,11 @@
 import Header from "@/components/ui/Header.vue";
 import ChatPreview from "@/components/ChattersList/ChatPreview.vue";
 import {useChattersStore} from "@/stores/chattersStore.ts";
+import {onMounted} from "vue";
 const chattersStore = useChattersStore();
+onMounted(() => {
+  chattersStore.fetchChats()
+})
 </script>
 
 <template>
