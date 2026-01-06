@@ -1,10 +1,11 @@
 import { defineStore } from 'pinia'
 import {ref} from "vue";
 import {useLoaderStore} from "@/stores/loaderStore.ts";
+import {useRouter} from "vue-router";
 
 
 export const useAccessStore = defineStore('access', () => {
-
+    const router = useRouter()
     const token = ref('accessToken')
     const loader= useLoaderStore();
     async function login(login: string, password: string): Promise<void> {
@@ -14,6 +15,7 @@ export const useAccessStore = defineStore('access', () => {
 
             if (login === 'admin' && password === 'admin') {
                 token.value = 'admin'
+                router.push('/list')
             }
         } catch (error) {
             console.error(error)
