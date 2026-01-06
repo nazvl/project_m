@@ -1,6 +1,6 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
-import LoginView from "../components/Login/LoginView.vue";
-import ChattersListView from "../components/ChattersList/ChattersListView.vue";
+import LoginView from "@/components/pages/Login/LoginView.vue";
+import ChattersListView from "@/components/pages/ChattersList/ChattersListView.vue";
 
 const routes = [
     { path: '/', component: LoginView },
