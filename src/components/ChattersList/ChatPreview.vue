@@ -1,13 +1,20 @@
 <script lang="ts" setup>
 import type {ChatPreview} from "@/types.ts";
+import {useChattersStore} from "@/stores/chattersStore.ts";
 
 const props = defineProps<ChatPreview>()
+
+const chattersStore = useChattersStore()
+function handleChatClick(id: number) {
+  chattersStore.currentChatId = id
+}
 </script>
 
 <template>
 
   <div class="flex items-center gap-3 px-3 py-2 rounded-xl cursor-pointertransition-colors duration-200
            hover:bg-gray-100 dark:hover:bg-gray-700"
+       @click="handleChatClick(props.id)"
   >
 
     <div class="relative shrink-0">

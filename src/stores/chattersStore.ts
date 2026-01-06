@@ -165,9 +165,10 @@ export const useChattersStore = defineStore('chatters', () => {
             loader.disable()
         }
     }
+    const currentChatId = ref<number | null>(null)
 
 
     return {
-        chatlist, fetchChats
+        chatlist, fetchChats, currentChatId
     }
 })
