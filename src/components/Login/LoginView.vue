@@ -11,7 +11,7 @@ const error = ref<string | null>(null);
 const showPassword = ref<boolean>(false);
 //TODO: перенести в стор, сделать рефакторинг проверок
 function handleLogin() {
-  if(user.value) {
+  if(user.value && user.value.login && user.value.password) {
     if(user.value.password.length > max_symbols && user.value.login.length > max_symbols) {
       accessStore.login(user.value.login, user.value.password);
     }
