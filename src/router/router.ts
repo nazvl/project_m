@@ -3,6 +3,7 @@ import LoginView from "../components/Login/LoginView.vue";
 import ChattersListView from "../components/ChattersList/ChattersListView.vue";
 
 const routes = [
+    { path: '/', component: LoginView },
     { path: '/login', component: LoginView },
     { path: '/list', component: ChattersListView }
 ]
