@@ -19,7 +19,7 @@ const svg = `
   <div v-loading.fullscreen.lock="loadingStore.loading"     element-loading-text="Loading..."
        :element-loading-spinner="svg"
        element-loading-svg-view-box="-10, -10, 50, 50"
-       element-loading-background="rgba(122, 122, 122, 0.8)" class="bg-gray-200 h-screen dark:bg-gray-800">
+       element-loading-background="rgba(122, 122, 122, 0.8)" class="bg-gray-200 h-full min-h-screen dark:bg-gray-800">
     <RouterView></RouterView>
   </div>
 </template>
